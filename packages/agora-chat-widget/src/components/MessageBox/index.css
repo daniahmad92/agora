@@ -1,0 +1,153 @@
+.message-box {
+  margin-top: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+  /* z-index: 8888; */
+}
+
+.no-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.msg {
+  margin: 10px 5px;
+}
+
+.msg-tag {
+  margin-left: 8px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(171, 177, 186, 0.3) !important;
+  color: #586376 !important;
+}
+
+.msg-user-other {
+  display: flex;
+  align-items: center;
+}
+
+.msg-user-me {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.msg-avatar {
+  width: 22px;
+  height: 22px;
+  margin: 0 5px;
+}
+
+.msg-border {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.msg-text {
+  margin: 8px 8px 0 0;
+  max-width: 60%;
+  min-height: 20px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.msg-data {
+  /* width: 200px; */
+  height: 20px;
+  font-size: 13px;
+  font-family: 'PingFangSC-Regular', 'PingFang SC';
+  font-weight: 400;
+  color: #1c1c1c;
+  line-height: 20px;
+}
+
+.msg-text-me {
+  background: #e1ebfc;
+}
+
+.msg-text-other {
+  background: #ffffff;
+  border: 1px solid #ececf1;
+  display: inline-block;
+}
+
+.no-msgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.no-msgs-text {
+  width: 89px;
+  height: 18px;
+  font-size: 13px;
+  font-family: 'PingFangSC-Regular', 'PingFang SC';
+  font-weight: 400;
+  color: #7d8798;
+  line-height: 18px;
+}
+
+.mute-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background: #f9f9fc;
+  border-radius: 4px;
+  margin: 25px 40px;
+  padding: 4px;
+  font-size: 13px;
+  color: #191919;
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.reset-msg-text {
+  margin-left: 5px;
+  color: #357bf6;
+  cursor: pointer;
+}
+
+.img-box {
+  position: relative;
+  max-width: 880px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.closeStyle {
+  position: absolute;
+  top: -25px;
+  right: -35px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: #7f7878;
+  cursor: pointer;
+}
+.max-img {
+  display: flex;
+  justify-content: center;
+}
+
+.max-img .ant-modal-content {
+  background: none;
+  box-shadow: none;
+}

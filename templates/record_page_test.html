@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- templates -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cloud Recording</title>
+    <script src="./edu_sdk.bundle.js"></script>
+  </head>
+
+  <body>
+    <style>
+      #root1 {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <div id="root1"></div>
+    <script type="text/javascript">
+      function useParams(location) {
+        const searchString = location.href.split('?').pop();
+        const urlParams = new URLSearchParams(location.href.split('?').pop());
+        const audienceParams = {};
+        for (let key of urlParams.keys()) {
+          audienceParams[key] = urlParams.get(key);
+        }
+        console.log('urlParams ', audienceParams);
+        return audienceParams;
+      }
+
+      const {
+        // appId,
+        // userUuid,
+        // userName,
+        // roomUuid,
+        // userRole,
+        // roomType,
+        // roomName,
+        // pretest = false,
+        // rtmUid,
+        // rtmToken,
+        // language,
+        // translateLanguage = 'auto',
+        // startTime,
+        // duration,
+        // courseWareList = [],
+        // personalCourseWareList = [],
+        userUuid,
+        userName,
+        roomUuid,
+        roleType,
+        roomType,
+        roomName,
+        pretest,
+        rtmUid,
+        rtmToken,
+        language,
+        startTime,
+        duration,
+        recordUrl,
+        appId,
+        userRole,
+        translateLanguage,
+        region,
+        minFPS = 1,
+        maxFPS = 5,
+        resolution = 0.8,
+      } = useParams(window.location);
+
+      const recordOptions = {
+        minFPS,
+        maxFPS,
+        resolution, // 这三个是上次测试出来可以接受的配置,
+        autoResolution: false,
+        autoFPS: false, // 这两个值必须设置 false
+      };
+
+      // const options = paramsObject
+      // if(!options) {
+      //     document.querySelector("#root1").textContent = "options missing"
+      // } else {
+      //AgoraEduSDK.setParameters()
+      AgoraEduSDK.setParameters(
+        JSON.stringify({
+          host: `https://api-solutions-dev.bj2.agoralab.co`,
+        }),
+      );
+      AgoraEduSDK.config({
+        appId,
+        cachePath: undefined,
+        region: region ? region : 'CN',
+      });
+      AgoraEduSDK.launch(document.querySelector('#root1'), {
+        userUuid,
+        userName,
+        roomUuid,
+        roleType: Number(roleType),
+        roomType: Number(roomType),
+        roomName,
+        pretest: false,
+        rtmUid,
+        rtmToken,
+        language,
+        startTime,
+        duration,
+        recordUrl,
+        appId,
+        userRole,
+        // translateLanguage: language,
+        courseWareList: [],
+        recordOptions,
+        listener: (evt, args) => {
+          console.log('evt', evt, args);
+          if (evt === 1) {
+            fetch(
+              `https://api-solutions-dev.bj2.agoralab.co/edu/apps/${appId}/v2/rooms/${roomUuid}/records/ready`,
+              {
+                headers: {
+                  'Content-Type': 'application/json',
+                  'x-agora-token': rtmToken,
+                  'x-agora-uid': userUuid,
+                },
+                method: 'PUT',
+                cors: true,
+              },
+            );
+            // Send a web request to notify the server side that the recording page was fully loaded.
+          }
+        },
+      }).then(() => {
+        console.log('start launch');
+      });
+      // }
+    </script>
+  </body>
+</html>

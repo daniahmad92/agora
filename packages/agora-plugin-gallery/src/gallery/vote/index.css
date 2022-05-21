@@ -1,0 +1,223 @@
+.vote-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.visibility-hidden {
+  visibility: hidden;
+}
+.visibility-visible {
+  visibility: visible;
+}
+.vote-btns-container {
+  margin-top: 86px;
+  text-align: center;
+}
+.vote-btn-container span {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.vote-title {
+  display: block;
+  width: 100%;
+  height: 90px;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: none !important;
+  border: 1px solid #eeeef7 !important;
+  box-sizing: border-box;
+  color: #191919;
+  padding: 5px;
+}
+.vote-title:hover,
+.vote-title:focus {
+  border: 1px solid #357bf6;
+  outline: none;
+}
+
+.vote-title:disabled {
+  height: auto;
+  background: transparent;
+  border: none;
+  padding: 0 5px 15px 5px;
+  -webkit-opacity: 1; /* Disabled status in safari */
+  -webkit-text-fill-color: #191919;
+}
+
+.vote-title::-webkit-scrollbar {
+  width: 13px;
+}
+.vote-title::-webkit-scrollbar-thumb {
+  background: #e7e7f3;
+  border-radius: 999px;
+  background-image: -webkit-linear-gradient(
+    0deg,
+    #eeeef7 7.7%,
+    #ffffff 7.7%,
+    #ffffff 23.1%,
+    transparent 23.1%,
+    transparent 76.9%,
+    #ffffff 76.9%,
+    #ffffff
+  );
+}
+.vote-title::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 0px 0px 5px 0px;
+}
+.vote-title::-webkit-input-placeholder,
+input.vote-item::placeholder {
+  color: #babaca;
+}
+/* .vote-title:disabled + .vote-limit {
+  display: none;
+} */
+.vote-limit {
+  position: absolute;
+  font-size: 13px;
+  color: #677386;
+  cursor: pointer;
+  right: 24px;
+  margin-top: -20px;
+}
+.vote-type {
+  padding: 10px 0;
+  font-size: 12px;
+  text-align: right;
+  color: rgb(25, 25, 25);
+}
+.vote-type label {
+  padding-left: 8px;
+  cursor: pointer;
+}
+.vote-type label input {
+  margin-right: 4px;
+  vertical-align: -2px;
+}
+.vote-type label:first-child {
+  margin-right: 30px;
+}
+.vote-type-tip {
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 9px;
+  border: 1px solid #357bf6;
+  font-size: 12px;
+  color: #357bf6;
+  padding: 0 6px;
+  margin-left: 10px;
+}
+.vote-item-container {
+  margin-bottom: 10px;
+}
+.vote-item-container .input-prefix {
+  width: initial !important;
+}
+.vote-item-container .input-wrapper {
+  border: none;
+  border-bottom: 1px solid #eeeef7;
+  background-color: transparent;
+  border-radius: 0;
+  outline: none;
+}
+.vote-item-container .input-wrapper-focused,
+.vote-item-container .input-wrapper:hover {
+  border-bottom: 1px solid #eeeef7;
+  transition: none;
+}
+.vote-question {
+  font-size: 14px;
+  color: #191919;
+  margin-bottom: 10px;
+}
+.result-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+}
+.result-cursor {
+  color: rgb(103, 115, 134);
+  width: 30px;
+  text-align: center;
+}
+.result-info-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-items: center;
+}
+.result-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.vote-text {
+  color: #191919;
+  width: 222px;
+}
+.vote-text-percentage {
+  color: rgb(103, 115, 134);
+}
+.vote-percentage {
+  height: 3px;
+  transition: all 0.3s linear;
+  position: relative;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+}
+.vote-percentage-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #0073ff;
+}
+.vote-btn-launch {
+  margin: 0 20px;
+}
+.vote-btn-launch.btn {
+  width: 90px;
+}
+
+.btn-rewrite-disabled[disabled] {
+  background-color: rgba(53, 123, 246, 0.3) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+.selection-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+.selection-text {
+  color: #191919;
+  flex: 1;
+  padding-left: 10px;
+  height: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+}
+.polling-title-tip {
+  display: inline-block;
+  border: 1px solid #357bf6;
+  border-radius: 9px;
+  color: #357bf6;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  width: 34px;
+}

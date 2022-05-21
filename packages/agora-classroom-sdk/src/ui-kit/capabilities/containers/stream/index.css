@@ -1,0 +1,190 @@
+.video-player {
+  /* @apply relative flex items-center justify-center; */
+  height: 168px;
+  width: 300px;
+  background: transparent;
+  border-radius: 4px;
+  color: #fff;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.video-player-fullscreen {
+  width: 100%;
+  height: 100%;
+}
+.video-player-overlay {
+  position: relative;
+  display: flex;
+  margin: 2px 0;
+}
+.video-player-overlay-no-margin {
+  margin: 0;
+}
+.video-player-overlay .top-right-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.video-player-overlay .bottom-left-info {
+  position: absolute;
+  bottom: 4px;
+  left: -3px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.video-player-overlay .bottom-left-info .volume-indicators {
+  margin-left: 0;
+}
+
+.video-player-overlay .bottom-left-info .username2 {
+  margin-left: 4px;
+  margin-top: 2px;
+  cursor: default;
+}
+
+.video-player-overlay .bottom-right-info {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  padding: 0 8px;
+}
+
+.video-player-overlay .camera-placeholder {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ececf1;
+  /* border: 0; */
+  background-color: #f9f9fc;
+  border-radius: 4px;
+}
+.video-player-tools-popover.popover-placement-bottom {
+  /* padding-top: 18px; */
+}
+
+.stream-player-enter {
+  width: 0;
+  opacity: 0;
+  animation: carousel-show 0.5s linear 1 forwards;
+}
+.stream-player-enter-active {
+  margin-right: 0 !important;
+}
+
+.stream-player-exit {
+  animation: carousel-hide 0.5s linear 1 forwards;
+}
+
+@keyframes carousel-show {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: calc((100vw / 7) - 4px);
+  }
+}
+
+@keyframes carousel-hide {
+  from {
+    opacity: 1;
+    width: calc((100vw / 7) - 4px);
+  }
+  to {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  border-radius: 2px;
+  z-index: 10;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.carousel-nav-enter {
+  opacity: 0;
+  animation: carousel-nav-show 0.2s linear 1 forwards;
+}
+
+.carousel-nav-enter-done {
+  opacity: 1;
+}
+
+.carousel-nav-exit {
+  animation: carousel-nav-hide 0.2s linear 1 forwards;
+  opacity: 0;
+}
+
+.carousel-nav-exit-done {
+  opacity: 0;
+}
+
+@keyframes carousel-nav-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes carousel-nav-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.audio-volume.microphone-disabled {
+  --main-color: #fff;
+}
+
+.audio-volume.microphone-off {
+  --main-color: red;
+}
+.wave-arm-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: auto 67.7%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('./assets/svga/wave-arm.gif');
+}
+.stream-zoom-status {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}

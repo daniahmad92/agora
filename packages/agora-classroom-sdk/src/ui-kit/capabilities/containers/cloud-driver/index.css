@@ -1,0 +1,171 @@
+.bottom-col {
+  position: absolute;
+  bottom: 58px;
+  align-items: center;
+  align-self: center;
+  max-height: 40px;
+}
+
+.agora-board-resources {
+  background: #ffffff;
+  box-shadow: 0px 2px 6px 0px rgba(47, 65, 146, 0.15);
+  border-radius: 6px;
+  /* border: 1px solid #E3E3EC; */
+  position: relative;
+  overflow-y: hidden;
+}
+
+.roster-wrap {
+  box-shadow: 0px 2px 6px 0px rgba(47, 65, 146, 0.15);
+}
+
+/* need rewrite ui. hover svg */
+.agora-board-resources .icon-hover {
+  height: 22px;
+  width: 22px;
+}
+
+.agora-board-resources .tabs-nav-list {
+  padding-left: 24px;
+}
+
+.agora-board-resources .tabs-nav {
+  background-color: #f9f9fc;
+}
+
+.agora-board-resources .rc-tabs-nav {
+  @apply bg-table-header;
+  height: 40px;
+}
+
+.agora-board-resources .rc-tabs-nav-list {
+  left: 19px;
+}
+
+.agora-board-resources .rc-tabs-tab-btn {
+  line-height: 20px;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+.agora-board-resources .rc-tabs-tab {
+  background: transparent;
+}
+
+.agora-board-resources .form-checkbox {
+  margin-right: 15px;
+}
+
+.agora-board-resources .custom-fix-width {
+  flex: 0;
+}
+
+.cloud-wrap {
+  border: 1px solid #e3e3ec;
+}
+.cloud-wrap .table-header .table-col-item {
+  color: #191919 !important;
+}
+
+.cloud-wrap .table-container {
+  height: 453px;
+}
+.cloud-wrap .table-container.upload-table-container {
+  height: 403px;
+}
+
+.cloud-wrap .table-container-upload .placeholder {
+  position: relative;
+  top: -47px;
+}
+
+.cloud-panel {
+  box-sizing: border-box;
+  padding: 7px 15px;
+}
+.cloud-panel,
+.cloud-panel-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cloud-panel-right .input-prefix {
+  position: relative;
+  left: -10px;
+  margin-right: -10px;
+  opacity: 0.5;
+}
+
+.cloud-help-tip {
+  display: flex;
+  margin-bottom: 15px;
+}
+.cloud-help-tip > .help-tip-left {
+  margin-right: 10px;
+}
+
+.cloud-btn-group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-right: 20px;
+  border-top: 1px solid #eeeef7;
+}
+
+.cloud-minimize-container {
+  min-width: 138px;
+}
+
+.cloud-minimize-container .cloud-upload-minimize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  border-radius: 15px;
+  border: 1px solid #e3e3ec;
+  cursor: pointer;
+}
+
+.cloud-minimize-container .cloud-upload-minimize .upload-minimize-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cloud-minimize-container .cloud-upload-minimize .upload-minimize-text {
+  margin-left: 4px;
+}
+
+.cloud-more-menu {
+  width: 100%;
+}
+
+.more-menu-item {
+  width: 100%;
+  font-size: 13px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #586376;
+  cursor: pointer;
+}
+
+.more-menu-item:hover {
+  background: #f8f8fb;
+  color: #191919;
+}
+
+.cloud-help-title {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #586376;
+}
